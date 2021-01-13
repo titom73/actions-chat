@@ -8,7 +8,7 @@
  *
  * @returns {object} Google Chat card body
  */
-const newPullRequest = (repo, title, author, htmlUrl) => {
+const newPullRequest = (repo, title, author, htmlUrl, pr_event_name) => {
   const body = {
     cards: [
       {
