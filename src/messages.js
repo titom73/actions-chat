@@ -13,12 +13,18 @@ const newPullRequest = (repo, title, author, htmlUrl, pr_event_name) => {
     cards: [
       {
         header: {
-          title: pr_event_name,
+          title: 'TEST Notification',
           imageUrl: 'https://vectorified.com/images/git-icon-4.png'
         },
         sections: [
           {
             widgets: [
+              {
+                keyValue: {
+                  topLabel: 'PR Event',
+                  content: pr_event_name
+                }
+              },
               {
                 keyValue: {
                   topLabel: 'Repository',
