@@ -13,7 +13,7 @@ const newPullRequest = (repo, title, author, htmlUrl) => {
     cards: [
       {
         header: {
-          title: 'New pull request',
+          title: pr_event_name,
           imageUrl: 'https://vectorified.com/images/git-icon-4.png'
         },
         sections: [

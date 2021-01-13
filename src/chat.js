@@ -16,8 +16,9 @@ const send = async (url) => {
       const title = github.context.payload.pull_request.title
       const author = github.context.actor
       const htmlUrl = github.context.payload.pull_request.html_url
+      const pr_event_name = github.context.pull_request.eventName
 
-      const body = newPullRequest(repo, title, author, htmlUrl)
+      const body = newPullRequest(repo, title, author, htmlUrl, pr_event_name)
       await post(axiosInstance, url, body)
       break
     }
