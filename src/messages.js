@@ -5,6 +5,7 @@
  * @param {string} title - Pull request title
  * @param {string} author - GitHub author username
  * @param {string} htmlUrl - Pull request GitHub Url
+ * @param {string} pr_event_name - Pull request Event
  *
  * @returns {object} Google Chat card body
  */
@@ -21,7 +22,7 @@ const newPullRequest = (repo, title, author, htmlUrl, pr_event_name) => {
             widgets: [
               {
                 keyValue: {
-                  topLabel: 'PR Event',
+                  topLabel: 'Event',
                   content: pr_event_name
                 }
               },
